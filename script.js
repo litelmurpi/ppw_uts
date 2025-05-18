@@ -1,15 +1,18 @@
-// Smooth scroll for navigation
 document.querySelectorAll("nav a").forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    e.preventDefault();
     const targetId = this.getAttribute("href");
+
+    if (!targetId.startsWith("#")) {
+      return;
+    }
+
+    e.preventDefault();
     document.querySelector(targetId).scrollIntoView({
       behavior: "smooth",
     });
   });
 });
 
-// Scroll reveal animation
 const observerOptions = {
   threshold: 0.1,
 };
@@ -26,7 +29,6 @@ document.querySelectorAll("section").forEach((section) => {
   observer.observe(section);
 });
 
-// Shrink navbar on scroll
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
   const currentScrollPos = window.pageYOffset;
@@ -46,28 +48,6 @@ window.onscroll = function () {
 
   prevScrollpos = currentScrollPos;
 };
-
-// Add this to your existing JavaScript
-
-function initializeProgressBars() {
-  document.querySelectorAll(".progress").forEach((progress) => {
-    const value = progress.getAttribute("data-progress");
-    progress.style.setProperty("--progress", value + "%");
-  });
-}
-
-// Call this function when the skills section becomes visible
-const skillsObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        initializeProgressBars();
-        skillsObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.5 }
-);
 
 document.querySelector(".skills-section").forEach((section) => {
   skillsObserver.observe(section);

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio</title>
+    <title>Portfolio Azfa</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
@@ -16,58 +16,104 @@
   </head>
   <body>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
+      <!-- <a href="#profile">Profile</a>
+      <a href="#skills">Skills</a>
+      <a href="#gallery">Gallery</a> -->
       <a href="kerjasama.html">Kerja Sama</a>
     </nav>
 
     <div class="header-title">
-      <h1>Personal Portfolio</h1>
-      <p>A passionate web developer creating modern and responsive websites</p>
-      <div class="scroll-indicator">
-        <i class="fas fa-chevron-down"></i>
-      </div>
+      <h1>Portfolio Azfa</h1>
     </div>
 
     <div class="container">
-      <section class="profile-section">
-        <img src="your-photo.jpg" alt="Profile Picture" class="profile-image" />
+      <section id="profile" class="profile-section">
+        <img src="assets/1.png" alt="Profile Picture" class="profile-image" />
         <div class="profile-info">
           <h2>Hello Everyone, I am</h2>
-          <h2>Your Name</h2>
-          <p>
-            I am a <strong>web developer</strong> with expertise in
-            <em>front-end development</em>. I enjoy
-            <u>creating responsive websites</u> and learning new technologies.
-          </p>
+          <h2>Yudistira Azfa</h2>
+            <p>
+              I am an enthusiastic entry-level web developer passionate about crafting <strong>engaging and responsive web experiences</strong>. Proficient in <em>HTML, CSS, PHP, and JavaScript</em>, I have hands-on experience with popular frameworks like <u>CodeIgniter 3</u> and <u>Laravel</u>. I enjoy building dynamic web applications, optimizing backend performance, and continuously expanding my skills through learning and contributing to open-source projects. Let's create something amazing together!
+            </p>
         </div>
       </section>
 
-      <section class="skills-section">
+      <section id="education" class="education-section">
+        <h2>Riwayat Pendidikan</h2>
+        <div class="education-list">
+          <div class="education-item">
+            <i class="fas fa-graduation-cap"></i>
+            <div class="education-content">
+              <h3>Universitas Amikom Yogyakarta</h3>
+              <p class="year">2024 - Sekarang</p>
+              <ul>
+                <li>Program Studi Sistem Informasi</li>
+                <li>Aktif dalam UKM AMCC</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="education-item">
+            <i class="fas fa-school"></i>
+            <div class="education-content">
+              <h3>SMK Negeri 2 Klaten</h3>
+              <p class="year">2020 - 2023</p>
+              <ul>
+                <li>Jurusan Sistem Informasi Jaringan dan Aplikasi</li>
+                <li>Nilai Rata-rata 79.44</li>
+                <li>Project Akhir: Sistem Penetas Telur Otomatis</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="skills-section">
         <h2>Skills and Interests</h2>
         <div class="skills-container">
           <div class="skill-card">
             <div class="skill-icon">
+              <i class="fa-solid fa-bug"></i>
+            </div>
+            <h3>Back End Developer</h3>
+            <div class="skill-tags">
+              <span>MySQL</span>
+              <span>PHP</span>
+              <span>JavaScript</span>
+              <span>Laravel</span>
+              <span>CodeIgniter</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
               <i class="fas fa-code"></i>
             </div>
-            <h3>Full Stack Developer</h3>
+            <h3>Front End Developer</h3>
             <div class="skill-tags">
               <span>HTML</span>
               <span>CSS</span>
               <span>JavaScript</span>
               <span>React</span>
-              <span>Node.js</span>
+              <span>Vue.js</span>
             </div>
           </div>
-          <div class="skill-card">
-            <div class="skill-icon">
-              <i class="fas fa-brain"></i>
-            </div>
-            <h3>Machine Learning</h3>
-            <div class="skill-tags">
-              <span>Python</span>
-              <span>TensorFlow</span>
-              <span>PyTorch</span>
-              <span>Data Science</span>
+        </div>
+      </section>
+
+      <section id="experience" class="experience-section">
+        <h2>Pengalaman Kerja</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Fullstack Web Developer</h3>
+              <p class="period">Mei 2023 - Mei 2024</p>
+              <p><em>CV. Karya Hidup Sentosa (Quick Tractor) - Magang</em></p>
+              <p>Bekerja sebagai Fullstack Web Developer di CV. Karya Hidup Sentosa (Quick Tractor), bertanggung jawab untuk mengelola dan mengembangkan situs web internal perusahaan (local web)</p>
+              <ul>
+                <li>Mengembangkan sistem ERP menggunakan CodeIgniter 3</li>
+                <li>Mengoptimasi performa database MySQL</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -77,31 +123,34 @@
         <h2>Video</h2>
         <div class="video-container">
           <iframe
-            src="https://www.youtube.com/embed/your-video-id"
+            src="https://www.youtube.com/embed/vS4egbEEn6E"
+            title="Prabowo Menang bukan Karena Joget dan Gemoy!"
             frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
         </div>
       </section>
 
-      <section class="gallery-section">
-        <h2>Photo Gallery</h2>
+      <section id="gallery" class="gallery-section">
+        <h2>Projects Gallery</h2>
         <div class="gallery">
-          <img src="gallery1.jpg" alt="Gallery Image 1" />
-          <img src="gallery2.jpg" alt="Gallery Image 2" />
+          <img src="assets/2.png" alt="ERP System CV. Karya Hidup Santosa" />
+          <img src="assets/3.png" alt="Alat Penetas Telur Otomatis" />  
         </div>
       </section>
 
       <section class="social-media">
         <h2>Social Media</h2>
         <div class="social-links">
-          <a href="https://instagram.com/yourusername" target="_blank">
+          <a href="https://instagram.com/azfaa_._" target="_blank">
             <i class="fab fa-instagram"></i>
           </a>
           <a href="https://linkedin.com/in/yourusername" target="_blank">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="https://github.com/yourusername" target="_blank">
+          <a href="https://github.com/litelmurpi" target="_blank">
             <i class="fab fa-github"></i>
           </a>
         </div>
@@ -109,7 +158,7 @@
     </div>
 
     <footer>
-      <p>&copy; 2025 Your Name. All rights reserved.</p>
+      <p>&copy; 2025 Yudistira Azfa. All rights reserved.</p>
     </footer>
   </body>
   <script src="script.js"></script>

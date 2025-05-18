@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Kerjasama - Portfolio Azfa</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <!-- <a href="index.html#profile">Profile</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#gallery">Gallery</a> -->
+      <a href="kerjasama.html">Kerja Sama</a>
+    </nav>
+
+    <div class="header-title">
+      <h1>Formulir Penawaran Kerjasama</h1>
+    </div>
+
+    <div class="kerjasama-container">
+      <section class="form-section">
+        <form id="kerjasama-form">
+          <div class="form-group">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" required />
+          </div>
+
+          <div class="form-group">
+            <label for="alamat">Alamat</label>
+            <input type="text" id="alamat" name="alamat" required />
+          </div>
+
+          <div class="form-group">
+            <label for="wa">No. WA</label>
+            <input type="text" id="wa" name="wa" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label>Jenis Kelamin</label>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="gender" value="laki-laki" /> Laki-laki
+              </label>
+              <label>
+                <input type="radio" name="gender" value="perempuan" /> Perempuan
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Bidang Kerjasama</label>
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" name="bidang" value="multimedia" />
+                Multimedia
+              </label>
+              <label>
+                <input type="checkbox" name="bidang" value="webdev" /> Web Dev
+              </label>
+              <label>
+                <input type="checkbox" name="bidang" value="fintech" /> Fintech
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="file">File Penawaran</label>
+            <input type="file" id="file" name="file" />
+          </div>
+
+          <div class="form-group">
+            <label for="tanggal">Tanggal Pelaksanaan</label>
+            <input type="date" id="tanggal" name="tanggal" required />
+          </div>
+
+          <div class="form-group">
+            <label for="domisili">Domisili</label>
+            <select id="domisili" name="domisili" required>
+              <option value="">--Pilih Domisili--</option>
+              <option value="jakarta">Jakarta</option>
+              <option value="bogor">Bogor</option>
+              <option value="depok">Depok</option>
+              <option value="tanggerang">Tanggerang</option>
+              <option value="bekasi">Bekasi</option>
+            </select>
+          </div>
+
+          <div class="button-group">
+            <button type="submit" class="btn btn-submit">Submit</button>
+            <button type="reset" class="btn btn-reset">Reset</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Yudistira Azfa. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
