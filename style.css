@@ -1,12 +1,21 @@
-/* Color Variables */
+/* 
+Nama: Yudistira Azfa Dani Wibowo
+NIM: 24.12.3274
+Kelas: SI04
+Tanggal: 17 - 21 Mei 2025
+
+File: style.css - Styling untuk index dan kerjasama 
+*/
+
+/* deklarasi variabel untuk memudahkan pengelolaan warna */
 :root {
-  --dark-blue: #213448;    /* Dark Ocean Blue - Primary */
-  --medium-blue: #547792;  /* Medium Steel Blue - Secondary */
-  --light-blue: #94B4C1;   /* Light Blue Gray - Tertiary */
-  --sage: #ECEFCA;         /* Sage Cream - Background */
+  --dark-blue: #213448;    
+  --medium-blue: #547792;  
+  --light-blue: #94B4C1;   
+  --sage: #ECEFCA;         
 }
 
-/* Base Styles */
+/* base styling */
 * {
   margin: 0;
   padding: 0;
@@ -25,29 +34,55 @@ body {
   color: var(--dark-blue);
 }
 
+/* styling navbar */
 nav {
   position: fixed;
   width: 100%;
   background-color: var(--dark-blue);
-  padding: 1.5rem;
+  padding: 1.5rem 2rem;
   box-shadow: 0 2px 10px rgba(33, 52, 72, 0.2);
   z-index: 1000;
   transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav a {
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   color: var(--sage);
-  text-decoration: none;
-  margin-right: 2rem;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
-nav a:hover {
+.nav-logo i {
+  font-size: 1.5rem;
   color: var(--light-blue);
 }
 
-/* index section */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--sage);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--dark-blue);
+  background-color: var(--light-blue);
+}
+
+/* styling untuk header */
 .header-title {
   padding: 8rem 2rem 4rem;
   background: linear-gradient(135deg, var(--medium-blue), var(--dark-blue));
@@ -55,12 +90,14 @@ nav a:hover {
   text-align: center;
 }
 
+/* styling untuk container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
 
+/* styling template section */
 section {
   opacity: 0;
   transform: translateY(20px);
@@ -104,27 +141,7 @@ section.visible {
   transform: scale(1.05);
 }
 
-/* .skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 3rem;
-}
-
-.skill-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(33, 52, 72, 0.08);
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.skill-card:hover {
-  transform: translateY(-5px);
-} */
-
+/* styling untuk skill section */
 .skill-icon {
   width: 64px;
   height: 64px;
@@ -140,12 +157,6 @@ section.visible {
   font-size: 28px;
   color: white;
 }
-
-/* .skill-card h3 {
-  margin-bottom: 1.5rem;
-  color: #2d3436;
-  font-size: 1.25rem;
-} */
 
 .skill-tags {
   display: flex;
@@ -168,6 +179,7 @@ section.visible {
   color: var(--light-blue);
 }
 
+/* styling untuk video */
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -183,6 +195,7 @@ section.visible {
   height: 100%;
 }
 
+/* styling untuk gallery */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -201,6 +214,7 @@ section.visible {
   transform: scale(1.03);
 }
 
+/* styling untuk sosial media/footer */
 .social-links {
   display: flex;
   gap: 2rem;
@@ -248,7 +262,7 @@ footer {
 }
 
 
-/* Kerjasama Section */
+/* styling kerjasama */
 .kerjasama-container {
   max-width: 800px;
   margin: 2rem auto 2rem;
@@ -326,7 +340,7 @@ footer {
   background: var(--light-blue);
 }
 
-/* Form Elements */
+/* styling elemen form */
 .form-group label {
   color: var(--dark-blue);
 }
@@ -337,7 +351,7 @@ footer {
   box-shadow: 0 0 0 2px rgba(84, 119, 146, 0.2);
 }
 
-/* Education & Experience Sections */
+/* Section Education dan Experience */
 .education-section,
 .experience-section {
   background-color: white;
@@ -442,12 +456,12 @@ footer {
   margin-bottom: 0.5rem;
   color: white;
 }
+/* end of section Education dan Experience */
 
-/* Skills Table Styles */
+/* style Skills Table */
 .skills-table-container {
-  padding: 1rem 0;
   width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
 .skills-table {
@@ -476,9 +490,30 @@ footer {
   align-items: center;
   margin-bottom: 1.5rem;
 }
+/* end of section Skills Table */
 
+/* animasi untuk skills section */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skills-visible .skill-tags span {
+  opacity: 0;
+}
+
+.skills-visible .skill-tags span.visible {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* responsive untuk ukuran 768px ke bawah */
 @media (max-width: 768px) {
-  /* Profile section fixes */
   .profile-section {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -491,7 +526,6 @@ footer {
     height: 150px;
   }
 
-  /* Container padding adjustment */
   .container {
     padding: 1rem;
     width: 100%;
@@ -499,7 +533,6 @@ footer {
     overflow-x: hidden;
   }
 
-  /* Skills table responsive fixes */
   .skills-table {
     border-spacing: 0;
     width: 100%;
@@ -521,7 +554,6 @@ footer {
     box-sizing: border-box;
   }
 
-  /* Education item fixes */
   .education-item {
     flex-direction: column;
     text-align: center;
@@ -536,7 +568,6 @@ footer {
     text-align: left;
   }
 
-  /* Skills tags adjustment */
   .skill-tags {
     padding: 0.5rem;
   }
@@ -546,20 +577,29 @@ footer {
     font-size: 0.8rem;
   }
 
-  /* Social links adjustment */
   .social-links {
     gap: 1.5rem;
   }
+
+  nav {
+    padding: 1rem;
+  }
+
+  .nav-logo span {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
 }
 
-/* Additional breakpoint for smaller devices */
+/* responsive untuk ukuran 480px ke bawah */
 @media (max-width: 480px) {
-  /* Further container adjustment */
   .container {
     padding: 0.5rem;
   }
 
-  /* Section padding reduction */
   .profile-section,
   .video-section,
   .gallery-section,
@@ -569,18 +609,15 @@ footer {
     padding: 1.5rem;
   }
 
-  /* Skills table further adjustment */
   .skills-table td {
     padding: 1rem;
-    margin: 0 0 1rem 0;
+    margin: 0 0 2rem 0;
   }
 
-  /* Remove any extra margins */
   .skills-table-container {
     padding: 0;
   }
 
-  /* Skill icon size reduction */
   .skill-icon {
     width: 48px;
     height: 48px;
@@ -590,12 +627,10 @@ footer {
     font-size: 20px;
   }
 
-  /* Header title padding adjustment */
   .header-title {
     padding: 6rem 1rem 3rem;
   }
 
-  /* Education content spacing */
   .education-content ul {
     padding-left: 1rem;
   }
